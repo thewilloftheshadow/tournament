@@ -66,6 +66,14 @@ client.on("message", async (message) => {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``)
     }
   }
+  
+  if (command == "setign") {
+    let validchar = ["Q", "W", "E", "R", "T", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "_"]
+    if (!args[0]) return message.channel.send("Yeah sure. Don't try make me look stupid, even I know you're not setting anything!")
+    if (message.author.username != "Ashish" && (args[0].length > 14 || args[0].length < 3)) return message.channel.send("I know that you need at least 3 characters and not more than 14 character to set your in game name. Only Ashish can set it more.")
+    if (!args[0].includes(validchar) || /\s/.test(args[0])) return message.channel.send("There is an invalid character!")
+    db.set(`setign_${message.author.id}`, args[0])
+  }
 })
 
 const clean = function (text) {
