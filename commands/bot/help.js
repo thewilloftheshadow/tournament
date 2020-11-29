@@ -40,7 +40,6 @@ module.exports.run = async (client, message, args) => {
     let props = client.commands.get(command);
     if (!props || props.help.name == "secretphrasetousefordmmessages")
       return message.channel.send("Sorry, I couldn't find that command");
-    let scon = await re.db.config.findOne({ server: message.guild.id }, "prefix").exec()
     let embed = new re.Discord.MessageEmbed()
       embed.setTitle(`Command info for ${command}`)
       embed.setAuthor(message.author.tag, message.author.avatarURL())
@@ -56,11 +55,7 @@ module.exports.run = async (client, message, args) => {
         },
         {
           name:`Module:`, 
-          value:`${props.help.module}${props.help.globalcmd ? " - Global" : ""}`
-        },
-        {
-          name:`Required ${props.help.access.mm ? "MM Permission" : "Permission Level"}:`, 
-          value:`${props.help.access.mm ? props.help.access.mm : `${props.help.access.level} - ${re.vars.botperms[props.help.access.level]}`}`
+          value:`${props.help.module}`
         }
       ]
     if (props.help.alias && props.help.alias.length > 0)

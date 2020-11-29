@@ -1,7 +1,7 @@
 module.exports.run = async (client, message, args) => {
   const re = message.re
-
-  message.channel.send(`<https://discord.com/api/oauth2/authorize?client_id=${re.client.user.id}&permissions=2147483647&scope=bot>`)
+  message.channel.send(`The bot is currently unavailable to invite!`)
+  //message.channel.send(`<https://discord.com/api/oauth2/authorize?client_id=${re.client.user.id}&permissions=2147483647&scope=bot>`)
 };
 
 module.exports.help = {
