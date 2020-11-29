@@ -9,5 +9,5 @@ module.exports.help = {
     syntax:`${__filename.split(`${__dirname}/`).pop().split(`.`).shift()} <user>`,
     alias:["settings", "set"],
     module:`${__dirname.split(`/`).pop()}`,
-    access: {level: 3, mm: null}
+    access: {level: 3}
 }

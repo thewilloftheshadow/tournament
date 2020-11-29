@@ -17,5 +17,5 @@ module.exports.help = {
   syntax: `${__filename.split(`${__dirname}/`).pop().split(`.`).shift()} <message>`,
   alias: ["copy"],
   module: `${__dirname.split(`/`).pop()}`,
-  access: {level: 5, mm: null}
+  access: {level: 5}
 }

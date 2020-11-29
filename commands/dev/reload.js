@@ -45,5 +45,5 @@ module.exports.help = {
     .shift()} <command>`,
   alias: [],
   module: `${__dirname.split(`/`).pop()}`,
-  access: { level: 5, mm: null },
+  access: { level: 5 },
 };

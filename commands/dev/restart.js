@@ -12,5 +12,5 @@ module.exports.help = {
   syntax: `${__filename.split(`${__dirname}/`).pop().split(`.`).shift()}`,
   alias: ["reboot"],
   module: `${__dirname.split(`/`).pop()}`,
-  access: {level: 4, mm: null}
+  access: {level: 4}
 }

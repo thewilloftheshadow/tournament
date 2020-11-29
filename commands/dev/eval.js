@@ -23,5 +23,5 @@ module.exports.help = {
   syntax: `${__filename.split(`${__dirname}/`).pop().split(`.`).shift()}`,
   alias: ["execute"],
   module: `${__dirname.split(`/`).pop()}`,
-  access: {level: 5, mm: null}
+  access: {level: 5}
 }

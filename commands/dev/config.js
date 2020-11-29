@@ -27,5 +27,5 @@ module.exports.help = {
   syntax: `${__filename.split(`${__dirname}/`).pop().split(`.`).shift()} <setting> <value>\n=${__filename.split(`${__dirname}/`).pop().split(`.`).shift()} <setting> push <value>`,
   alias: [],
   module: `${__dirname.split(`/`).pop()}`,
-  access: {level: 5, mm: null}
+  access: {level: 5}
 }
