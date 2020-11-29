@@ -10,8 +10,13 @@
   "author": "Shadow",
   "license": "ISC",
   "dependencies": {
+    "array-pull": "^0.2.1",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "ms": "^2.1.2",
+    "nanoid": "^3.1.18",
+    "node-cmd": "^4.0.0",
     "prettier": "^2.1.2",
     "quick.db": "^7.1.3"
   },
